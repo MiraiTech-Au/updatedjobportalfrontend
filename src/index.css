@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add to your CSS file */
+.modal-scrollable {
+  max-height: 90vh; /* 90% of the viewport height */
+  overflow-y: auto; /* Enables vertical scrolling */
+  
+  /* Style the scrollbar itself (width, background) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0,0,0,0.1); /* scrollbar background */
+  }
+
+  /* Style the scrollbar handle (color, hover effect) */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2); /* scrollbar handle color */
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  /* Handle hover effect for the scrollbar handle */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.3); /* scrollbar handle color on hover */
+  }
+
+  /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) rgba(0,0,0,0.1);
+}
+
+/* For Internet Explorer, Edge */
+.modal-scrollable {
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.modal-scrollable::-webkit-scrollbar-corner {
+  background: transparent !important; /* Hides the scrollbar corner by making it transparent */
+.no-scrollbar::-webkit-scrollbar{
+    display: none;
+}
+}
+.no-scrollbar{
+    -ms-overflow-style:none;
+    scrollbar-width: none;
+}

@@ -1,0 +1,11 @@
+
+*:focus-visible {
+    outline: none !important;
+  }
+
+  /* Add to your CSS file */
+.modal-scrollable {
+    max-height: 90vh; /* 90% of the viewport height */
+    overflow-y: auto; /* Enables vertical scrolling */
+  }
+  
